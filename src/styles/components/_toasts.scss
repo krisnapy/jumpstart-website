@@ -1,0 +1,57 @@
+// Toasts
+// *******************************************************************************
+
+// Toast Mixin
+.bs-toast[class^='bg-'],
+.bs-toast[class*=' bg-'] {
+  border: none;
+}
+
+.toast.bs-toast {
+  margin-top: 20px;
+  color: $light;
+  z-index: $zindex-toast;
+
+  .toast-header {
+    color: $light;
+    border: none;
+    position: relative;
+
+    .btn-close {
+      position: absolute;
+      right: 0;
+      top: -10px;
+      border-radius: $border-radius;
+      padding: 0.45rem;
+      background-size: $toast-btn-close-size;
+      transition: all 0.23s ease 0.1s;
+      background-color: $light;
+      opacity: 0.9;
+      box-shadow: $box-shadow-sm;
+      
+      // For hover effect of close btn
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 1;
+        outline: none;
+      }
+    }
+  }
+  .toast-header ~ .toast-body {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
+
+// Bootstrap Toasts Example
+.toast-ex {
+  position: fixed;
+  top: 4.1rem;
+  right: 2.5rem;
+}
+
+// Placement Toast example
+.toast-placement-ex {
+  position: fixed;
+}

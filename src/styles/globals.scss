@@ -1,0 +1,13 @@
+// Config
+@import 'config/variables';
+@import 'fonts/nunito';
+@import '~bootstrap/scss/bootstrap.scss';
+@import 'config/utils';
+@import 'config/dark/app-dark.scss';
+@import 'config/includes';
+
+// Component
+@import 'components/layout';
+@import 'components/side-bar';
+@import 'components/auth';
+@import 'components/toasts';

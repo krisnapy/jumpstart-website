@@ -1,0 +1,13 @@
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.content-page {
+  background-color: $gray-100;
+  margin-left: $leftbar-width;
+  overflow: hidden;
+  padding: $topbar-height 12px 65px;
+  min-height: 100vh;
+}
