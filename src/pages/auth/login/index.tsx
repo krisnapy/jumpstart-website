@@ -1,12 +1,33 @@
 import { Toast } from '@/components'
 import { FormControl, FormPassword, FormProvider } from '@/components/form-control'
-import { FunctionComponent, useEffect } from 'react'
+import { FunctionComponent, useEffect, useRef } from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 import { useLogin } from './login.hook'
+import useStore  from '@/stores'
 
 const Login: FunctionComponent = () => {
   const methods = useForm()
+
+  const {
+    userStore: {},
+  } = useStore()
+
+  const loadData = async () => {
+    try {
+      console.log('masuk')
+      getUsers()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    loadData()
+  }, [])
+
+  console.log(users)
+  console.log(selectedUser)
 
   const { onLogin } = useLogin()
 

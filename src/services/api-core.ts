@@ -7,15 +7,13 @@ export class ApiCore {
   private async processResult(response: any) {
     const res = await fetch(`${API_URL}/${response.path}`, {
       method: response.method,
-      body: response.wrappedPayload,
       credentials: 'include',
       headers: {
         Authorization: 'Bearer ',
       },
     })
-    
+
     const header = await res.headers.get('cookie')
-    console.log(header)
     return await res.json()
   }
 
@@ -51,10 +49,6 @@ export class ApiCore {
 
   protected async put(apiParams: ApiParams) {
     return await this.callApi('put', apiParams)
-  }
-
-  protected async patch(apiParams: ApiParams) {
-    return await this.callApi('patch', apiParams)
   }
 
   protected async delete(apiParams: ApiParams) {

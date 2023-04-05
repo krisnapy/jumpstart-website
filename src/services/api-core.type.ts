@@ -1,4 +1,4 @@
-export type RequestMethod = 'get' | 'post' | 'put' | 'patch' | 'delete'
+export type RequestMethod = 'get' | 'post' | 'put' | 'delete'
 
 export type Payload = Record<string, any>
 
@@ -8,5 +8,4 @@ export interface ApiParams {
   payloadWrapper?: string
 
   payload?: Payload
-
 }

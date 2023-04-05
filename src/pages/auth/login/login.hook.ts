@@ -1,11 +1,6 @@
-import { login } from '@/actions/auth'
-import { useDispatch } from 'react-redux'
-
 export function useLogin() {
-  const dispatch = useDispatch<any>()
 
-  const onLogin = (data: Record<string, any>) => {
-    dispatch(login(data))
+  const onLogin = async (data: Record<string, any>) => {
   }
 
   return { onLogin }
